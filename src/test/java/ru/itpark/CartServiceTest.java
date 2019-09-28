@@ -13,5 +13,8 @@ public class CartServiceTest {
         service.add(hotDog);
 
         assertEquals(hotDog.getPrice(), service.getAmount());
+
+        service.add(hotDog, 5);
+        assertEquals(hotDog.getPrice()*5, service.getAmount());
     }
 }
